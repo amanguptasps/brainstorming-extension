@@ -10,45 +10,49 @@ const Content = ({ pageId }) => {
     return { _id: uuid(), ideas: [], topics: "KSDjfksd" }
   }
   return (
-    <div class="main-wrapper-project">
-      <div class="project-title">
-        <div class="container-fluid">
+    <div className="main-wrapper-project">
+      <div className="project-title">
+        <div className="container-fluid">
           <p>
             Project Title Goes Here
-            <span class="icon1">
-              Saving<i class="fa fa-spinner" aria-hidden="true"></i>
+            <span className="icon1">
+              Saving<i className="fa fa-spinner" aria-hidden="true"></i>
             </span>
           </p>
         </div>
       </div>
-      <div class="topic-title">
-        <div class="container-fluid">
+      <div className="topic-title">
+        <div className="container-fluid">
           <p>
             Topic Goes Here
             <a href="#">
-              <span class="icon">
-                <i class="fa fa-pencil" aria-hidden="true"></i>
+              <span className="icon">
+                <i className="fa fa-pencil" aria-hidden="true"></i>
               </span>
             </a>
           </p>
         </div>
       </div>
-      <div class="border-bottom-title"></div>
-      <div class="topics">
-        <div class="container-fluid">
-          <div class="topic-inner">
+      <div className="border-bottom-title"></div>
+      <div className="topics">
+        <div className="container-fluid">
+          <div className="topic-inner">
             {filterIdeas &&
               filterIdeas.map((item, i) => {
                 return item.ideas.map((idea) => {
                   return (
-                    <div class="topic-1" key={i}>
-                      <div class="icon-bar">
+                    <div className="topic-1" key={i} id="target">
+                      <div className="icon-bar">
                         <a href="#">
-                          <i class="fa fa-thumbs-o-up" aria-hidden="true" data-title="You can only vote for ideas in voting mode"></i>
+                          <i
+                            className="fa fa-thumbs-o-up"
+                            aria-hidden="true"
+                            data-title="You can only vote for ideas in voting mode"
+                          ></i>
                         </a>
                         <span>
                           <i
-                            class="fa fa-share"
+                            className="fa fa-share"
                             aria-hidden="true"
                             onClick={() =>
                               dispatch({
@@ -59,10 +63,10 @@ const Content = ({ pageId }) => {
                           ></i>
                         </span>
                         <a href="#">
-                          <i class="fa fa-times" aria-hidden="true"></i>
+                          <i className="fa fa-times" aria-hidden="true"></i>
                         </a>
                       </div>
-                      <p>{idea.idea}</p>
+                      <p className="ideas">{idea.idea}</p>
                     </div>
                   )
                 })
