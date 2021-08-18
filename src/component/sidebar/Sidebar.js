@@ -150,24 +150,18 @@ const Sidebar = ({ pageId, setPageId }) => {
               range: 4,
             }}
             customButtons={{
-              up: <span style={{ fontSize: "36px" }}>A</span>,
-              down: <span style={{ fontSize: "20px" }}>A</span>,
+              down: <span style={{ fontSize: "20px", fontFamily: "Baskervville, serif"}}>A</span>,
+              up: <span style={{ fontSize: "36px", marginTop: "10px", fontFamily: "Baskervville, serif"}}>A</span>,
               style: {
-                backgroundColor: "red",
-                color: "white",
-                WebkitBoxSizing: "border-box",
-                WebkitBorderRadius: "5px",
-                width: "60px",
+                backgroundColor: "transparent",
+                color: "black",
+            
+                border:"none",
               },
-              buttonsMargin: 10,
+             
             }}
           />
-          <div className="select-left">
-            <p>A</p>
-            <span className="capital-a">
-              <p>A</p>
-            </span>
-          </div>
+          
           <div className="select-right">
             <ul className="list-unstyled">
               {pages.map((page, index) => (
