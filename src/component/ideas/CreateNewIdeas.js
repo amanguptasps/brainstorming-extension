@@ -29,11 +29,11 @@ function CreateNewIdeas({ pageId }) {
 
   return (
     <form className="NewTodoForm" onSubmit={handleSubmit}>
-      <div class="text">
-        <div class="input-group mb-3">
+      <div className="text">
+        <div className="input-group mb-3">
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             placeholder="Type an idea to add here"
             aria-label="Recipient's username"
             aria-describedby="basic-addon2"
@@ -42,9 +42,9 @@ function CreateNewIdeas({ pageId }) {
             id="idea"
             onChange={handleChange}
           />
-          <div class="input-group-append">
-            <span class="input-group-text" id="basic-addon2">
-              <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+          <div className="input-group-append">
+            <span className="input-group-text" id="basic-addon2">
+              <i className="fa fa-paper-plane-o" aria-hidden="true"></i>
             </span>
           </div>
         </div>
