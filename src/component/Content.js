@@ -45,7 +45,7 @@ const Content = ({ pageId }) => {
                       <div className="icon-bar">
                         <a href="#">
                           <i
-                            className="fa fa-thumbs-o-up"
+                            className="fa fa-thumbs-up"
                             aria-hidden="true"
                             data-title="You can only vote for ideas in voting mode"
                           ></i>
