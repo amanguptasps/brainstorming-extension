@@ -2,7 +2,7 @@ import React, { useState, useReducer } from "react"
 import uuid from "uuid"
 import { useDispatch } from "react-redux"
 
-function CreateNewIdeas({ pageId }) {
+function CreateNewIdeas({ pageId, voteMode }) {
   const dispatch = useDispatch()
   const [userInput, setUserInput] = useReducer(
     (state, newState) => ({ ...state, ...newState }),
@@ -41,6 +41,7 @@ function CreateNewIdeas({ pageId }) {
             name="idea"
             id="idea"
             onChange={handleChange}
+            disabled={voteMode}
           />
           <div className="input-group-append">
             <span className="input-group-text" id="basic-addon2">

@@ -7,6 +7,7 @@ import FontSizeChanger from "react-font-size-changer"
 const Sidebar = ({ pageId, setPageId }) => {
   const dispatch = useDispatch()
   const { pages } = useSelector((state) => state.topicsPagesreducer)
+  const { vote } = useSelector((state) => state.modeReducer)
   console.log("Pagess", pages)
   return (
     <div className="main-wrapper">
@@ -154,18 +155,36 @@ const Sidebar = ({ pageId, setPageId }) => {
               range: 4,
             }}
             customButtons={{
-              down: <span style={{ fontSize: "20px", fontFamily: "Baskervville, serif"}}>A</span>,
-              up: <span style={{ fontSize: "36px", marginTop: "10px", fontFamily: "Baskervville, serif"}}>A</span>,
+              down: (
+                <span
+                  style={{
+                    fontSize: "20px",
+                    fontFamily: "Baskervville, serif",
+                  }}
+                >
+                  A
+                </span>
+              ),
+              up: (
+                <span
+                  style={{
+                    fontSize: "36px",
+                    marginTop: "10px",
+                    fontFamily: "Baskervville, serif",
+                  }}
+                >
+                  A
+                </span>
+              ),
               style: {
                 backgroundColor: "transparent",
                 color: "black",
-            
-                border:"none",
+
+                border: "none",
               },
-             
             }}
           />
-          
+
           <div className="select-right">
             <ul className="list-unstyled">
               {pages.map((page, index) => (
@@ -180,7 +199,7 @@ const Sidebar = ({ pageId, setPageId }) => {
             </ul>
           </div>
         </div>
-        <CreateNewIdeas pageId={pageId} />
+        <CreateNewIdeas pageId={pageId} voteMode={vote} />
       </div>
       <div className="footer">
         <div className="button">

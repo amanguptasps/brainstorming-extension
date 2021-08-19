@@ -1,5 +1,5 @@
 const initialState = {
-  brainstorm: false,
+  brainstorm: true,
   vote: false,
   result: false,
 }
