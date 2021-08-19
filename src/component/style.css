@@ -139,6 +139,7 @@ a span.icon {
   padding: 18px 6px;
   min-height: 103px;
     min-width: 103px;
+    cursor: pointer;
 }
 .icon-heading a {
   color: #242c37;
@@ -517,8 +518,9 @@ button:hover {
   border-top: 1px solid #d1cfd0;
   display: none;
 }
-.icon-bar .fa-thumbs-o-up {
+.icon-bar .fa-thumbs-up {
   color: white;
+  outline: black;
 }
 .icon-bar .fa-share {
   color: #242c37;
@@ -643,9 +645,10 @@ button:hover {
   color: white;
   font-size: 12px;
   position: absolute;
-  padding: 3px 5px 3px 5px;
+  padding: 5px 6px 20px 6px;
   bottom: -1.6em;
   left: 100%;
+  top:20px;
   white-space: nowrap;
   opacity: 0;
   z-index: 99999;
@@ -661,7 +664,13 @@ button:hover {
     padding:0px 8px;
    }
 }
-@media only screen and (max-width:768px){
+@media only screen and (max-width:900px){
+  .content-main {
+    grid-template-columns: 100%;
+    padding:0px 8px;
+   }
+}
+/* @media only screen and (max-width:768px){
 .main{
  grid-template-columns: 100%;
 }
@@ -795,4 +804,4 @@ display: none;
    font-size: 25px;
    margin-right: 5px;
 }
-}
+} */
