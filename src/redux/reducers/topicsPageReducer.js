@@ -2,7 +2,14 @@ const initialState = {
   pages: [
     {
       _id: "22",
-      ideas: [{ _id: "s", idea: "dsgsdds" }],
+      ideas: [
+        {
+          _id: "s",
+          idea:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia" +
+            +" molestiae quas vel sint commodi repudiandae consequuntur",
+        },
+      ],
       topics: "sdfds",
     },
   ],

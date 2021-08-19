@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux"
 import uuid from "uuid"
 const Content = ({ pageId }) => {
   const { pages } = useSelector((state) => state.topicsPagesreducer)
+  const { brainstorm } = useSelector((state) => state.modeReducer)
+  console.log("pasfasdfsda", brainstorm)
   const filterIdeas = pages.filter((page) => page._id === pageId)
   console.log("Filtereasdfsd ", filterIdeas)
   const dispatch = useDispatch()
@@ -43,13 +45,19 @@ const Content = ({ pageId }) => {
                   return (
                     <div className="topic-1" key={i} id="target">
                       <div className="icon-bar">
-                        <a href="#">
+                        {brainstorm ? (
                           <i
                             className="fa fa-thumbs-o-up"
                             aria-hidden="true"
                             data-title="You can only vote for ideas in voting mode"
                           ></i>
-                        </a>
+                        ) : (
+                          <i
+                            className="fa fa-thumbs-o-up"
+                            aria-hidden="true"
+                          ></i>
+                        )}
+
                         <span>
                           <i
                             className="fa fa-share"
