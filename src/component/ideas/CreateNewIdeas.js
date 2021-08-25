@@ -44,7 +44,7 @@ function CreateNewIdeas({ pageId }) {
           />
           <div className="input-group-append">
             <span className="input-group-text" id="basic-addon2">
-              <i className="fa fa-paper-plane-o" aria-hidden="true"></i>
+              <i className="far fa-paper-plane" aria-hidden="true"></i>
             </span>
           </div>
         </div>

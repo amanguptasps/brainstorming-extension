@@ -45,14 +45,14 @@ const Content = ({ pageId }) => {
                       <div className="icon-bar">
                         <a href="#">
                           <i
-                            className="fa fa-thumbs-up"
+                            className="fas fa-thumbs-up"
                             aria-hidden="true"
                             data-title="You can only vote for ideas in voting mode"
                           ></i>
                         </a>
                         <span>
                           <i
-                            className="fa fa-share"
+                            className="fas fa-share"
                             aria-hidden="true"
                             onClick={() =>
                               dispatch({
@@ -63,7 +63,7 @@ const Content = ({ pageId }) => {
                           ></i>
                         </span>
                         <a href="#">
-                          <i className="fa fa-times" aria-hidden="true"></i>
+                          <i className="fas fa-times" aria-hidden="true"></i>
                         </a>
                       </div>
                       <p className="ideas">{idea.idea}</p>
