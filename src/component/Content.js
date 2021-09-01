@@ -4,9 +4,7 @@ import uuid from "uuid"
 const Content = ({ pageId }) => {
   const { pages } = useSelector((state) => state.topicsPagesreducer)
   const { brainstorm } = useSelector((state) => state.modeReducer)
-  console.log("pasfasdfsda", brainstorm)
   const filterIdeas = pages.filter((page) => page._id === pageId)
-  console.log("Filtereasdfsd ", filterIdeas)
   const dispatch = useDispatch()
   const payload = () => {
     return { _id: uuid(), ideas: [], topics: "KSDjfksd" }

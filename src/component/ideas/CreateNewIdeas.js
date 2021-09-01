@@ -1,7 +1,7 @@
 import React, { useState, useReducer } from "react"
 import uuid from "uuid"
 import { useDispatch } from "react-redux"
-
+import { Link } from "react-router-dom"
 function CreateNewIdeas({ pageId, voteMode }) {
   const dispatch = useDispatch()
   const [userInput, setUserInput] = useReducer(
@@ -43,11 +43,13 @@ function CreateNewIdeas({ pageId, voteMode }) {
             onChange={handleChange}
             disabled={voteMode}
           />
-          <div className="input-group-append">
-            <span className="input-group-text" id="basic-addon2">
-              <i className="far fa-paper-plane" aria-hidden="true"></i>
-            </span>
-          </div>
+          <Link to="/content">
+            <div className="input-group-append">
+              <span className="input-group-text" id="basic-addon2">
+                <i className="far fa-paper-plane" aria-hidden="true"></i>
+              </span>
+            </div>
+          </Link>
         </div>
       </div>
     </form>
