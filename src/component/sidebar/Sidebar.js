@@ -37,10 +37,7 @@ const Sidebar = ({ pageId, setPageId }) => {
                   <a href="#">
                     <i class="fas fa-vote-yea" aria-hidden="true"></i>
                     <br />
-                    <span class="text-icon">
-                      Vote <br />
-                      Mode
-                    </span>
+                    <span class="text-icon">Vote Mode</span>
                   </a>
                 </button>
                 <div class="dropdown-content">
@@ -61,12 +58,9 @@ const Sidebar = ({ pageId, setPageId }) => {
           >
             <div class="icon-heading">
               <a href="#">
-                <span style={{ fontSize: "24px" }}>5</span>
+                <span class="content-five">5</span>
                 <br />
-                <span class="text-icon">
-                  Results
-                  <br /> Mode
-                </span>
+                <span class="text-icon">Results Mode</span>
               </a>
             </div>
           </div>

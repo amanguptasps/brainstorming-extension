@@ -55,7 +55,6 @@ const Content = ({ pageId }) => {
                             aria-hidden="true"
                           ></i>
                         )}
-
                         <span>
                           <i
                             className="fas fa-share"
