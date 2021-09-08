@@ -1,3 +1,4 @@
+import * as actionTypes from "../actionType"
 const initialState = {
   brainstorm: true,
   vote: false,
@@ -6,21 +7,21 @@ const initialState = {
 
 const modeReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case "BRAINSTORM_MODE":
+    case actionTypes.BRAINSTORM_MODE:
       return {
         ...state,
         brainstorm: payload,
         vote: false,
         result: false,
       }
-    case "VOTE_MODE":
+    case actionTypes.VOTE_MODE:
       return {
         ...state,
         vote: payload,
         brainstorm: false,
         result: false,
       }
-    case "RESULT_MODE":
+    case actionTypes.RESULT_MODE:
       return {
         ...state,
         result: payload,

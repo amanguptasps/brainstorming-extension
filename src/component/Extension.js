@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import Sidebar from "./sidebar/Sidebar"
 import Content from "./Content"
 import "./style.css"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 export const Extension = () => {
   const getUrlVars = () => {
     var vars = [],
@@ -40,7 +41,7 @@ export const Extension = () => {
             },
             {
               type: "iframe1",
-              webpage_url: "brainstorming.softprodigyphp.in",
+              webpage_url: process.env.CONTENT_EXTURL,
               height: 100,
               width: 67,
               top: 0,
@@ -59,7 +60,7 @@ export const Extension = () => {
             },
             {
               type: "iframe1",
-              webpage_url: "brainstorming.softprodigyphp.in",
+              webpage_url: process.env.CONTENT_EXTURL,
               height: 100,
               width: 67,
               top: 0,
@@ -68,7 +69,7 @@ export const Extension = () => {
             },
             {
               type: "iframe2",
-              webpage_url: "brainstorming.softprodigyphp.in",
+              webpage_url: process.env.CONTENT_EXTURL,
               height: 100,
               width: 67,
               top: 0,
@@ -77,7 +78,7 @@ export const Extension = () => {
             },
             {
               type: "iframe3",
-              webpage_url: "brainstorming.softprodigyphp.in",
+              webpage_url: process.env.CONTENT_EXTURL,
               height: 100,
               width: 67,
               top: 0,
@@ -96,7 +97,7 @@ export const Extension = () => {
             },
             {
               type: "iframe1",
-              webpage_url: "brainstorming.softprodigyphp.in",
+              webpage_url: process.env.CONTENT_EXTURL,
               height: 100,
               width: 67,
               top: 0,
@@ -105,7 +106,7 @@ export const Extension = () => {
             },
             {
               type: "iframe2",
-              webpage_url: "brainstorming.softprodigyphp.in",
+              webpage_url: process.env.CONTENT_EXTURL,
               height: 100,
               width: 67,
               top: 0,
@@ -114,7 +115,7 @@ export const Extension = () => {
             },
             {
               type: "iframe3",
-              webpage_url: "brainstorming.softprodigyphp.in",
+              webpage_url: process.env.CONTENT_EXTURL,
               height: 100,
               width: 67,
               top: 0,
@@ -132,9 +133,15 @@ export const Extension = () => {
   }, [])
   const [pageId, setPageId] = useState()
   return (
-    <div className="main">
-      <Content pageId={pageId} />
-      <Sidebar pageId={pageId} setPageId={setPageId} />
-    </div>
+    <Router>
+      <Switch>
+        <div className="main">
+          <Sidebar pageId={pageId} setPageId={setPageId} />
+          <Route exact path="/content">
+            <Content pageId={pageId} />
+          </Route>
+        </div>
+      </Switch>
+    </Router>
   )
 }

@@ -1,3 +1,4 @@
+import * as actionTypes from "../actionType"
 const initialState = {
   pages: [
     {
@@ -17,13 +18,13 @@ const initialState = {
 
 const topicsPagesreducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case "CREATE_TOPICS_PAGE":
+    case actionTypes.CREATE_TOPICS_PAGE:
       return {
         ...state,
         pages: state.pages.concat(payload),
       }
 
-    case "CREATE_IDEAS":
+    case actionTypes.CREATE_IDEAS:
       return {
         ...state,
         pages: state.pages.map((page) =>

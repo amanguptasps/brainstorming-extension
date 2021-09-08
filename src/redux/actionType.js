@@ -1,0 +1,5 @@
+export const CREATE_TOPICS_PAGE = "CREATE_TOPICS_PAGE"
+export const CREATE_IDEAS = "CREATE_IDEAS"
+export const BRAINSTORM_MODE = "BRAINSTORM_MODE"
+export const VOTE_MODE = "VOTE_MODE"
+export const RESULT_MODE = "RESULT_MODE"
