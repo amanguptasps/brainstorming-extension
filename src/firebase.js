@@ -2,8 +2,6 @@
 
 // firebase.initializeApp(firebaseConfig)
 
-export default firebase
-
 import firebase from "firebase"
 // import { firebaseConfig } from '';
 const firebaseConfig = {
